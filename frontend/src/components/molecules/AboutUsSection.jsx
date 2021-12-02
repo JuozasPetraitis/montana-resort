@@ -28,7 +28,7 @@ const AboutUsSection = () => {
           <div className="w-1/2 h-60 pb-8 mr-2 md:h-80 lg:h-500px">
             <img className="w-full h-full object-cover" src={BigPool} alt="Pool" />
           </div>
-          <div className="w-1/2 h-60 pt-8 md:h-80">
+          <div className="w-1/2 h-60 pt-8 md:h-80 lg:ml-5">
             <img className="w-full h-full object-cover" src={BigPoolArea} alt="Pool Chairs" />
           </div>
         </div>
