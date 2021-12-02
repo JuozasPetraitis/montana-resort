@@ -13,11 +13,14 @@ import Footer from './components/organisms/Footer';
 const App = () => {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="rooms" element={<RoomsPage />} />
-        <Route path="about" element={<AboutPage />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="rooms" element={<RoomsPage />} />
+          <Route path="about" element={<AboutPage />} />
+        </Routes>
+      </main>
+
       <Footer />
     </>
   );
