@@ -2,12 +2,14 @@ import React from 'react';
 
 //! Components
 import AboutUsSection from '../components/molecules/AboutUsSection';
+import OurOffersSection from '../components/molecules/OurOffersSection';
 
 //! Main Component
-const HomePage = (props) => {
+const HomePage = () => {
   return (
     <>
-      <AboutUsSection />
+      {/* <AboutUsSection /> */}
+      <OurOffersSection />
     </>
   );
 };
