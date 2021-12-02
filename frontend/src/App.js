@@ -6,6 +6,9 @@ import HomePage from './pages/HomePage';
 import RoomsPage from './pages/RoomsPage';
 import AboutPage from './pages/AboutPage';
 
+//! Components
+import Footer from './components/organisms/Footer';
+
 //! Main Component
 const App = () => {
   return (
@@ -15,6 +18,7 @@ const App = () => {
         <Route path="rooms" element={<RoomsPage />} />
         <Route path="about" element={<AboutPage />} />
       </Routes>
+      <Footer />
     </>
   );
 };
