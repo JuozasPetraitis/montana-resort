@@ -8,7 +8,7 @@ import OurOffersSection from '../components/molecules/OurOffersSection';
 const HomePage = () => {
   return (
     <>
-      {/* <AboutUsSection /> */}
+      <AboutUsSection />
       <OurOffersSection />
     </>
   );
