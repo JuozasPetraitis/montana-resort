@@ -1,7 +1,7 @@
 import React from 'react';
 
 //! Components
-import Carousel from '../components/molecules/Carousel';
+import HeroSection from '../components/molecules/HeroSection';
 import AboutUsSection from '../components/molecules/AboutUsSection';
 import OurOffersSection from '../components/molecules/OurOffersSection';
 import FoodSection from '../components/molecules/FoodSection';
@@ -13,7 +13,7 @@ import GallerySection from '../components/molecules/GallerySection';
 const HomePage = () => {
   return (
     <>
-      <Carousel />
+      <HeroSection />
       <AboutUsSection />
       <OurOffersSection />
       <FoodSection />

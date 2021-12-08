@@ -4,7 +4,7 @@ import React from 'react';
 import Hero from '../../assets/images/Hero.jpg';
 
 //! Main Component
-const Carousel = () => {
+const HeroSection = () => {
   return (
     <div className="h-hero">
       <div className="h-full relative">
@@ -19,4 +19,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default HeroSection;
