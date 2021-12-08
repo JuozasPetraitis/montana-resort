@@ -13,7 +13,7 @@ import GallerySection from '../components/molecules/GallerySection';
 const HomePage = () => {
   return (
     <>
-      {/* <Carousel /> */}
+      <Carousel />
       <AboutUsSection />
       <OurOffersSection />
       <FoodSection />
