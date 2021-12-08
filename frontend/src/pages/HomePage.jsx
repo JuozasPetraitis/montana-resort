@@ -7,6 +7,7 @@ import OurOffersSection from '../components/molecules/OurOffersSection';
 import FoodSection from '../components/molecules/FoodSection';
 import FeaturedRooms from '../components/molecules/FeaturedRooms';
 import ReservationSection from '../components/molecules/ReservationSection';
+import GallerySection from '../components/molecules/GallerySection';
 
 //! Main Component
 const HomePage = () => {
@@ -18,6 +19,7 @@ const HomePage = () => {
       <FoodSection />
       <FeaturedRooms />
       <ReservationSection />
+      <GallerySection />
     </>
   );
 };

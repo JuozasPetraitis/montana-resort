@@ -6,7 +6,7 @@ import { IoIosArrowDroprightCircle, IoIosArrowDropleftCircle } from 'react-icons
 
 //! IMG
 import Carousel1 from '../../assets/images/Carousel1.jpg';
-import Carousel2 from '../../assets/images/Carousel2.jpg';
+import Carousel2 from '../../assets/images/Offer1.jpg';
 import Carousel3 from '../../assets/images/Carousel3.jpg';
 
 //! Main Component
