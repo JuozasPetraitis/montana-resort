@@ -49,7 +49,7 @@ const Header = () => {
           <Link to="rooms">
             <p className="text-white text-center text-2xl">Rooms</p>
           </Link>
-          <Link to="about-us">
+          <Link to="about">
             <p className="text-white text-center text-2xl">About</p>
           </Link>
           <Link to="blog">
@@ -70,7 +70,7 @@ const Header = () => {
             <Link to="rooms">
               <p className="text-lg font-light tracking-widest">Rooms</p>
             </Link>
-            <Link to="about-us">
+            <Link to="about">
               <p className="text-lg font-light tracking-widest">About</p>
             </Link>
             <Link to="blog">
@@ -106,7 +106,7 @@ const Header = () => {
               <Link to="rooms">
                 <p className="text-lg font-light tracking-widest">Rooms</p>
               </Link>
-              <Link to="about-us">
+              <Link to="about">
                 <p className="text-lg font-light tracking-widest">About</p>
               </Link>
               <Link to="blog">

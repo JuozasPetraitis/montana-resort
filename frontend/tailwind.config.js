@@ -25,7 +25,7 @@ module.exports = {
         },
       },
       height: {
-        hero: '95vh',
+        halfScreen: '50vh',
       },
     },
   },

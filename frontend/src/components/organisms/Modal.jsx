@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 
 const Modal = ({ children, closeModal, opacity }) => {
   return createPortal(
-    <div className={`fixed top-0 left-0 w-full h-full text-6xl bg-gray-200 bg-opacity-${opacity}`}>
+    <div className={`fixed top-0 left-0 w-full h-full text-6xl bg-gray-200 bg-opacity-${opacity} z-20`}>
       <span onClick={() => closeModal()} className="absolute right-0 z-10 cursor-pointer">
         &#x2717;
       </span>

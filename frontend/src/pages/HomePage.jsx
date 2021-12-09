@@ -13,7 +13,7 @@ import GallerySection from '../components/molecules/GallerySection';
 const HomePage = () => {
   return (
     <>
-      <HeroSection />
+      <HeroSection sendMeStyle={{ image: 'Home' }} IsIt />
       <AboutUsSection />
       <OurOffersSection />
       <FoodSection />
