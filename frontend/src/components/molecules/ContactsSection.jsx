@@ -8,15 +8,15 @@ import { TiSocialYoutubeCircular } from 'react-icons/ti';
 //! Main Component
 const ContactsSection = () => {
   return (
-    <div className="container m-auto flex flex-col justify-center my-10">
-      <p className="text-center lg:text-4xl">Contact us</p>
+    <div className="container m-auto flex flex-col justify-center my-10 gap-8">
+      <p className="text-center text-2xl lg:text-4xl">Contact us</p>
 
-      <div className="flex justify-center items-center gap-4 my-20">
-        <form className="flex flex-col gap-4 my-8 mx-2 w-2/5">
+      <div className="flex lg:justify-center lg:items-center gap-4">
+        <form className="flex flex-col w-full gap-4 my-8 mx-2 lg:w-2/5">
           <input type="text" placeholder="Enter your name" className="border border-gray-200 text-sm px-4 py-2" />
           <input type="text" placeholder="Email" className="border border-gray-200 text-sm px-4 py-2" />
           <input type="text" placeholder="Subject" className="border border-gray-200 text-sm px-4 py-2" />
-          <input type="text" placeholder="Enter Message" className="border border-gray-200 text-sm px-4 py-2" />
+          <input type="text" placeholder="Enter Message" className="border border-gray-200 text-sm px-4 pt-2 pb-20" />
           <input
             type="submit"
             value="Send"
