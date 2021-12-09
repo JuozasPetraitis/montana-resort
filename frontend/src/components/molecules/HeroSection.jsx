@@ -6,8 +6,8 @@ import Hero from '../../assets/images/Hero.jpg';
 //! Main Component
 const HeroSection = () => {
   return (
-    <div className="h-hero">
-      <div className="h-full relative">
+    <div className="h-screen relative">
+      <div className="h-full">
         <img className="w-full h-full object-cover opacity-80" src={Hero} alt="" />
       </div>
 

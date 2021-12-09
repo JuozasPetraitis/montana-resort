@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 //! CSS
 //! IMG
 import HotelArea from '../../assets/images/Area.jpg';
-import PoolArea from '../../assets/images/PoolArea.jpg';
+import PoolArea from '../../assets/images/Thumbnail.jpg';
 
 //! Main Component
 const AboutUsSection = () => {
