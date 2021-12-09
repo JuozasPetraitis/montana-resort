@@ -26,6 +26,7 @@ module.exports = {
       },
       height: {
         halfScreen: '50vh',
+        map: '30rem'
       },
     },
   },
