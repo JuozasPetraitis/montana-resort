@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BlogData from '../../helpers/BlogData.json';
+import BlogData from '../../json/BlogData.json';
 
 //! Main Return
 const BlogSection = () => {
