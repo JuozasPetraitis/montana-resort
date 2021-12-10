@@ -15,8 +15,6 @@ const Header = () => {
 
   const handleScroll = () => {
     setTrackScroll(window.scrollY);
-    console.log(window.scrollY);
-    // console.log(window.innerHeight);
   };
 
   useEffect(() => {
