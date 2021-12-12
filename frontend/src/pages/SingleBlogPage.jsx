@@ -2,16 +2,16 @@ import React from 'react';
 
 //! Components
 import HeroSection from '../components/molecules/HeroSection';
-import BlogSection from '../components/molecules/BlogSection';
+import SingleBlog from '../components/molecules/SingleBlog';
 
 //! Main Component
-const BlogPage = () => {
+const SingleBlogPage = () => {
   return (
     <>
       <HeroSection sendMeStyle={{ image: 'Room' }} />
-      <BlogSection />
+      <SingleBlog />
     </>
   );
 };
 
-export default BlogPage;
+export default SingleBlogPage;

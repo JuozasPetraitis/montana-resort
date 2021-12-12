@@ -41,7 +41,7 @@ const FeaturedRooms = () => {
 
       <div className="flex flex-col md:flex-row">
         {FeaturedRoomsInformation.map((i) => (
-          <div className="py-1 px-0.5">
+          <div className="py-1 px-0.5" key={Math.random()}>
             <div className="h-80 mb-6 ">
               <img className="w-full h-full object-cover" src={i.image} alt={i.title} />
             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import BlogData from '../../json/BlogData.json';
 
@@ -25,9 +26,11 @@ const BlogSection = () => {
 
               <p className="text-sm text-gray-500 px-2 truncate">{item.description}</p>
 
-              <button className="block w-1/2 m-auto mt-4 py-2 border rounded-sm border-gray-600 cursor-pointer">
-                Read More
-              </button>
+              <Link to={`${item.id}`}>
+                <button className="block w-1/2 m-auto mt-4 py-2 border rounded-sm border-gray-600 cursor-pointer">
+                  Read More
+                </button>
+              </Link>
             </div>
           </div>
         ))}
