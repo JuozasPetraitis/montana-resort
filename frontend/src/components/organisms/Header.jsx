@@ -35,7 +35,7 @@ const Header = () => {
         window.innerHeight - 50 <= window.scrollY ? setTrackScroll(false) : setTrackScroll(true);
         break;
       case false:
-        window.innerHeight / 2 - 75 <= window.scrollY ? setTrackScroll(false) : setTrackScroll(true);
+        window.innerHeight / 2 - 50 <= window.scrollY ? setTrackScroll(false) : setTrackScroll(true);
         break;
       default:
         break;
