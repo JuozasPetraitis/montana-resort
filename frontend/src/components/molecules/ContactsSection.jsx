@@ -27,7 +27,7 @@ const ContactsSection = () => {
         <div className="hidden lg:block h-map w-2/5">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9488.876548007836!2d73.22532508491172!3d-0.6247486301494652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1slt!2slt!4v1639063331727!5m2!1slt!2slt"
-            allowfullscreen="false"
+            allowFullScreen={false}
             loading="lazy"
             title="Map"
             className="w-full h-full"

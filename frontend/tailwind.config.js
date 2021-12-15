@@ -25,8 +25,9 @@ module.exports = {
         },
       },
       height: {
+        112: '448px',
         halfScreen: '50vh',
-        map: '30rem'
+        map: '30rem',
       },
     },
   },

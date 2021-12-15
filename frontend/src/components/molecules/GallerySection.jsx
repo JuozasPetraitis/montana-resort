@@ -12,8 +12,9 @@ import Gallery4 from '../../assets/images/Gallery4.jpg';
 import Gallery5 from '../../assets/images/Gallery5.jpg';
 import Modal from '../organisms/Modal';
 
+const Photos = [Gallery1, Gallery2, Gallery3, Gallery4, Gallery5];
+
 const GallerySection = () => {
-  const Photos = [Gallery1, Gallery2, Gallery3, Gallery4, Gallery5];
   //! Hooks
   const [isOpen, setIsOpen] = useState(false);
   const [photoUrl, setPhotoUrl] = useState('');
@@ -26,7 +27,7 @@ const GallerySection = () => {
     setDataIndex(e.target.dataset.index);
   };
 
-  const makeItTwo = (target) => {
+  const CarouselArrows = (target) => {
     let i = dataIndex;
 
     switch (target) {
@@ -54,32 +55,35 @@ const GallerySection = () => {
 
         break;
       default:
-        console.log('Works');
+        break;
     }
   };
 
   //! Return
   return (
     <>
-      <div className="flex flex-wrap lg:flex-row lg:flex-nowrap pt-10">
-        {Photos.map((i, index) => (
-          <div className="relative h-80 w-full mx-0.5 mb-0.5 last:mb-0 md:w-1/2 md:m-0 group" key={index}>
-            <img className="w-full h-full object-cover group-hover:opacity-30" src={i} alt="Gallery" />
-            <div
-              className="absolute w-full h-full top-0 flex justify-center items-center cursor-pointer"
-              data-index={index}
-              onClick={showGalleryInModal}
-            >
-              <AiOutlineInstagram className="text-4xl hidden group-hover:block pointer-events-none" />
+      <div className="container m-auto">
+        <div className="flex flex-wrap lg:flex-row lg:flex-nowrap px-0.5">
+          {Photos.map((i, index) => (
+            <div className="relative h-80 w-full mb-0.5 last:mb-0 md:w-1/2 md:m-0 group" key={index}>
+              <img className="w-full h-full object-cover group-hover:opacity-30" src={i} alt="Gallery" />
+              <div
+                className="absolute w-full h-full top-0 flex justify-center items-center cursor-pointer"
+                data-index={index}
+                onClick={showGalleryInModal}
+              >
+                <AiOutlineInstagram className="text-4xl hidden group-hover:block pointer-events-none" />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
+
       {isOpen && (
-        <Modal closeModal={() => setIsOpen(false)} opacity={80}>
+        <Modal closeModal={() => setIsOpen(false)} opacity={90}>
           <IoIosArrowDropleftCircle
             className="text-purple-50 opacity-50 md:text-gray-600 text-5xl lg:text-7xl absolute top-1/2 left-0 z-10 ml-30"
-            onClick={() => makeItTwo('left')}
+            onClick={() => CarouselArrows('left')}
           />
           <div className="md:w-2/3 md:h-3/4 m-auto">
             <img
@@ -90,7 +94,7 @@ const GallerySection = () => {
           </div>
           <IoIosArrowDroprightCircle
             className="text-purple-50 opacity-50 md:text-gray-600 text-5xl lg:text-7xl absolute top-1/2 right-px z-10 mr-30"
-            onClick={() => makeItTwo('right')}
+            onClick={() => CarouselArrows('right')}
           />
         </Modal>
       )}

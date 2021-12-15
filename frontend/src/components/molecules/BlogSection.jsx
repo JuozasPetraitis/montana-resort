@@ -5,13 +5,12 @@ import BlogData from '../../json/BlogData.json';
 
 //! Main Return
 const BlogSection = () => {
-  console.log(BlogData.data);
   return (
     <div className="container m-auto my-20 flex flex-col gap-20">
       <p className="text-3xl text-center">Blog</p>
       <div className="container m-auto md:flex md:flex-wrap gap-y-10 lg:px-4">
         {BlogData.data.map((item) => (
-          <div className="md:w-1/2 lg:px-20">
+          <div className="md:w-1/2 lg:px-20" key={item.id}>
             <div className="h-80 px-0.5">
               <img className="w-full h-full object-cover" src={item.image} alt={item.title} />
             </div>

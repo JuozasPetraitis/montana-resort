@@ -6,7 +6,7 @@ import Offer1 from '../../assets/images/Offer1.jpg';
 import Offer2 from '../../assets/images/Offer2.jpg';
 import Offer3 from '../../assets/images/Offer3.jpg';
 
-const FeaturedRoomsInformation = [
+const RoomsInformation = [
   {
     title: 'Suite Room',
     price: '$450/NIGHT',
@@ -33,26 +33,20 @@ const FeaturedRoomsInformation = [
 //! Main Component
 const FeaturedRooms = () => {
   return (
-    <div className="py-20">
-      <div className="max-w-7xl m-auto text-center">
-        <p className="mb-4 text-sm text-blue-500">Our Rooms</p>
-        <p className="mb-4 text-3xl text-gray-700">Featured Rooms</p>
-      </div>
+    <div className="container m-auto flex flex-col gap-8 px-0.5 py-8">
+      <p className="mb-8 text-3xl text-center text-gray-700">Our Rooms</p>
 
-      <div className="flex flex-col md:flex-row">
-        {FeaturedRoomsInformation.map((i) => (
-          <div className="py-1 px-0.5" key={Math.random()}>
-            <div className="h-80 mb-6 ">
-              <img className="w-full h-full object-cover" src={i.image} alt={i.title} />
+      <div className="flex flex-col gap-8 md:flex-row md:gap-2">
+        {RoomsInformation.map((item) => (
+          <div className="flex flex-col gap-4 lg:w-1/3" key={Math.random()}>
+            <div className="h-56 lg:h-80">
+              <img className="w-full h-full object-cover" src={item.image} alt={item.title} />
             </div>
 
-            <div className="flex flex-col gap-4">
-              <p className="text-3xl text-gray-700 text-center">{i.title}</p>
+            <p className="text-2xl text-gray-700 text-center">{item.title}</p>
+            <p className="text-sm text-gray-500">{item.description}</p>
 
-              <p className="text-sm text-gray-500 px-2">{i.description}</p>
-
-              <button className="block w-1/2 m-auto py-2 px-12 border rounded-sm border-blue-500">Book a room</button>
-            </div>
+            <button className="py-2 border rounded-sm border-blue-300 text-blue-300">Book a room</button>
           </div>
         ))}
       </div>
