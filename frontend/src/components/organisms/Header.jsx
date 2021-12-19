@@ -73,7 +73,6 @@ const Header = () => {
       break;
   }
 
-  console.dir(window);
   return (
     <nav>
       <div className="fixed top-0 left-0 right-0 flex flex-col justify-between px-2 md:px-4 bg-gray-600 text-white lg:hidden z-10">
