@@ -12,34 +12,38 @@ import AboutImage from '../../assets/images/Gallery3.jpg';
 import BlogImage from '../../assets/images/Gallery2.jpg';
 import ContactsImage from '../../assets/images/Contact2.jpg';
 
+//! Components
+import Modal from './Modal';
+import LoginForm from './LoginForm';
+
 //! Main Component
 const Header = () => {
   //! Hooks
   const menuRef = useRef();
   const [trackScroll, setTrackScroll] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   let history = createBrowserHistory();
 
   useEffect(() => {
+    const handleScroll = () => {
+      switch (fullScreen) {
+        case true:
+          window.innerHeight - 50 <= window.scrollY ? setTrackScroll(false) : setTrackScroll(true);
+          break;
+        case false:
+          window.innerHeight / 2 - 50 <= window.scrollY ? setTrackScroll(false) : setTrackScroll(true);
+          break;
+        default:
+          break;
+      }
+    };
     window.addEventListener('scroll', handleScroll);
-  }, []);
+  });
 
   //! Functions
   const toggleMenu = () => {
     menuRef.current.classList.toggle('hidden');
     menuRef.current.classList.toggle('animate-menu');
-  };
-
-  const handleScroll = () => {
-    switch (fullScreen) {
-      case true:
-        window.innerHeight - 50 <= window.scrollY ? setTrackScroll(false) : setTrackScroll(true);
-        break;
-      case false:
-        window.innerHeight / 2 - 50 <= window.scrollY ? setTrackScroll(false) : setTrackScroll(true);
-        break;
-      default:
-        break;
-    }
   };
 
   let Image;
@@ -69,6 +73,7 @@ const Header = () => {
       break;
   }
 
+  console.dir(window);
   return (
     <nav>
       <div className="fixed top-0 left-0 right-0 flex flex-col justify-between px-2 md:px-4 bg-gray-600 text-white lg:hidden z-10">
@@ -129,9 +134,10 @@ const Header = () => {
               <Link to="rooms">
                 <button className="px-4 py-2 rounded-sm border-2 text-lg font-semibold">Book a room</button>
               </Link>
-              <Link to="#">
-                <button className="px-4 py-2 rounded-sm border-2 text-lg font-semibold">Log in</button>
-              </Link>
+
+              <button onClick={() => setIsOpen(true)} className="px-4 py-2 rounded-sm border-2 text-lg font-semibold">
+                Log in
+              </button>
             </div>
           </div>
         </div>
@@ -145,8 +151,24 @@ const Header = () => {
         <div className="absolute w-full h-full top-0 left-0 flex flex-col justify-center items-center">
           <p className="text-4xl tracking-widest capitalize font-normal text-white text-center">Life Is Beautiful</p>
           {fullScreen && <p className="text-2xl text-white text-center">Unlock to enjoy the best views of Maldives</p>}
+          {window.innerWidth < 768 ? (
+            <div className="flex gap-4 justify-between">
+              <Link to="rooms">
+                <button className="px-4 py-2 font-semibold bg-opacity-60 bg-white">Book a room</button>
+              </Link>
+
+              <button onClick={() => setIsOpen(true)} className="px-4 py-2 font-semibold bg-opacity-60 bg-white">
+                Log in
+              </button>
+            </div>
+          ) : null}
         </div>
       </div>
+      {isOpen && (
+        <Modal closeModal={() => setIsOpen(false)} opacity={90}>
+          <LoginForm />
+        </Modal>
+      )}
     </nav>
   );
 };
