@@ -16,9 +16,9 @@ const Footer = () => {
           </p>
 
           <div className="flex items-center gap-2">
-            <AiFillFacebook className="text-3xl text-white opacity-70" />
-            <AiOutlineTwitter className="text-3xl text-white opacity-70" />
-            <AiOutlineInstagram className="text-3xl text-white opacity-70" />
+            <AiFillFacebook className="text-3xl text-white opacity-70 cursor-pointer" />
+            <AiOutlineTwitter className="text-3xl text-white opacity-70 cursor-pointer" />
+            <AiOutlineInstagram className="text-3xl text-white opacity-70 cursor-pointer" />
           </div>
         </div>
 
@@ -55,8 +55,12 @@ const Footer = () => {
           <p className="text-2xl text-center">Newsletter</p>
 
           <form className="flex justify-between">
-            <input className="text-center w-full py-1 rounded-sm" type="text" placeholder="Enter your mail" />
-            <input className="bg-blue-400 text-white px-4 rounded-sm" type="button" value="Sign Up" />
+            <input
+              className="text-center w-full py-1 rounded-sm text-black"
+              type="text"
+              placeholder="Enter your mail"
+            />
+            <input className="bg-blue-400 text-white px-4 rounded-sm cursor-pointer" type="button" value="Sign Up" />
           </form>
 
           <p className="text-gray-300 text-center">Subscribe our newsletter to get updates</p>

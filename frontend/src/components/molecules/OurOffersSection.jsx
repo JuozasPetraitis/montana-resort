@@ -1,4 +1,5 @@
 import React from 'react';
+import Slide from 'react-reveal/Slide';
 
 //! CSS
 //! IMG
@@ -33,28 +34,30 @@ const OffersData = [
 //! Main Component
 const OurOffersSection = () => {
   return (
-    <div className="container m-auto flex flex-col gap-8 px-0.5 py-8">
-      <p className="mb-8 text-3xl text-center text-gray-700">Ongoing Offers</p>
+    <div className="container m-auto flex flex-col gap-4 px-0.5 py-20">
+      <Slide right>
+        <p className="mb-8 text-3xl text-center text-gray-700">Ongoing Offers</p>
 
-      <div className="flex flex-col gap-8 md:flex-row md:gap-2">
-        {OffersData.map((item) => (
-          <div className="flex flex-col gap-4 lg:w-1/3" key={Math.random()}>
-            <div className="h-56 lg:h-80">
-              <img className="w-full h-full object-cover" src={item[0]} alt="Vila" />
+        <div className="flex flex-col gap-8 md:flex-row md:gap-2">
+          {OffersData.map((item) => (
+            <div className="flex flex-col gap-4 lg:w-1/3" key={Math.random()}>
+              <div className="h-56 lg:h-60 lg:px-8">
+                <img className="w-full h-full object-cover rounded-sm" src={item[0]} alt="Vila" />
+              </div>
+
+              <p className="text-xl lg:text-2xl text-gray-700">{item[1]}</p>
+
+              <ul className="list-disc list-inside text-gray-500 pb-4">
+                <li>{item[2]}</li>
+                <li>{item[3]}</li>
+                <li>{item[4]}</li>
+              </ul>
+
+              <button className="w-3/12 m-auto py-2 border rounded-sm border-blue-400 text-blue-600">Book now</button>
             </div>
-
-            <p className="text-xl lg:text-2xl font-medium text-gray-700">{item[1]}</p>
-
-            <ul className="list-disc list-inside text-gray-600">
-              <li className="text-sm">{item[2]}</li>
-              <li className="text-sm">{item[3]}</li>
-              <li className="text-sm">{item[4]}</li>
-            </ul>
-
-            <button className="py-2 border rounded-sm border-blue-300 text-blue-300">Book now</button>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </Slide>
     </div>
   );
 };

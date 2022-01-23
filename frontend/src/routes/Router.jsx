@@ -7,7 +7,7 @@ import HomePage from '../pages/HomePage';
 import RoomsPage from '../pages/RoomsPage';
 import AboutPage from '../pages/AboutPage';
 import BlogPage from '../pages/BlogPage';
-import SingleBlogPage from '../pages/SingleBlogPage';
+// import SingleBlogPage from '../pages/SingleBlogPage';
 import ContactsPage from '../pages/ContactsPage';
 
 //! Main Component
@@ -27,7 +27,7 @@ const Router = () => {
         <Route path="rooms" element={<RoomsPage />} />
         <Route path="about" element={<AboutPage />} />
         <Route path="blog" element={<BlogPage />} />
-        <Route path="/blog/:id" element={<SingleBlogPage />} />
+        {/* <Route path="/blog/:id" element={<SingleBlogPage />} /> */}
         <Route path="contacts" element={<ContactsPage />} />
       </Route>
     </Routes>
