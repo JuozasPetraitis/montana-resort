@@ -6,10 +6,10 @@ import { AiFillFacebook, AiOutlineTwitter, AiOutlineInstagram } from 'react-icon
 //! Main Component
 const Footer = () => {
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-black text-white px-4">
       <div className="container m-auto py-8 px-0.5 flex flex-col gap-y-8 md:flex-row md:flex-wrap lg:flex-nowrap">
         <div className="flex flex-col gap-4 md:w-1/2 md:px-4">
-          <p className="text-2xl text-blue-200">Montana Resort</p>
+          <p className="text-xl text-blue-200">Montana Resort</p>
 
           <p className="text-sm">
             Leather detail contrastic colour contour stunning silhouette working peplum. Statement buttons patch.
@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-4 md:w-1/2 md:px-4">
-          <p className="text-2xl">Navigation</p>
+          <p className="text-xl">Navigation</p>
 
           <div className="flex flex-col">
             <Link to="/about">
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-4 md:w-1/2 md:px-4">
-          <p className="text-2xl">Contact</p>
+          <p className="text-xl">Contact</p>
 
           <div>
             <p>76/A, Green Lane, Dhanmondi, NYC</p>
@@ -52,7 +52,7 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-4 md:w-1/2 md:px-4">
-          <p className="text-2xl text-center">Newsletter</p>
+          <p className="text-xl text-center">Newsletter</p>
 
           <form className="flex justify-between">
             <input
@@ -68,7 +68,9 @@ const Footer = () => {
       </div>
 
       <hr className="mx-4 border-b border-gray-700"></hr>
-      <p className="py-5 text-center text-sm text-gray-300">Copyright ©2021 All rights reserved</p>
+      <p className="py-5 text-center text-sm text-gray-300">
+        Copyright ©{new Date().getFullYear()} All rights reserved
+      </p>
     </footer>
   );
 };

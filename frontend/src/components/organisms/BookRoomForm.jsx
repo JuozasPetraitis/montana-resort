@@ -39,14 +39,7 @@ const BookRoomForm = () => {
   const secondStep = useRef();
   const thirdStep = useRef();
 
-  const [item, setItem] = useState();
-
-  const clickHandler = (e) => {
-    console.dir(e.target);
-
-    // firstStep.current.className = 'hidden';
-    // secondStep.current.className = 'block';
-  };
+  const clickHandler = (e) => {};
 
   //! Main Return
   return (

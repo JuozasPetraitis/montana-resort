@@ -35,6 +35,8 @@ module.exports = {
     extend: {
       margin: ['last'],
       display: ['group-hover'],
+      letterSpacing: ['group-hover', 'hover'],
+      fontWeight: ['hover'],
     },
   },
 };

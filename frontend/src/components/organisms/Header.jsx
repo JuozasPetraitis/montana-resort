@@ -43,7 +43,7 @@ const Header = () => {
       }
     };
     window.addEventListener('scroll', handleScroll);
-  });
+  }, [fullScreen]);
 
   useEffect(() => {
     switch (history.location.pathname) {
@@ -97,9 +97,9 @@ const Header = () => {
 
   return (
     <nav>
-      <div className="fixed top-0 left-0 right-0 flex flex-col justify-between px-2 md:px-4 bg-black text-white lg:hidden z-10">
+      <div className="fixed top-0 left-0 right-0 flex flex-col justify-between px-4 md:px-4 bg-black text-white lg:hidden z-10 py-4">
         <div className="flex justify-between">
-          <p className="font-logo text-5xl">Montana Resort</p>
+          <p className="font-logo text-4xl font-bold pl-2">Montana Resort</p>
 
           <div className="flex items-center">
             <span onClick={toggleMenu}>
@@ -108,35 +108,35 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="hidden" ref={menuRef}>
+        <div className="hidden py-4" ref={menuRef}>
           <Link to="/" onClick={toggleMenu}>
-            <p className="text-white text-center text-2xl">Home</p>
+            <p className="text-white text-center text-xl pb-2">Home</p>
           </Link>
           <Link to="rooms" onClick={toggleMenu}>
-            <p className="text-white text-center text-2xl">Rooms</p>
+            <p className="text-white text-center text-xl py-2">Rooms</p>
           </Link>
           <Link to="about" onClick={toggleMenu}>
-            <p className="text-white text-center text-2xl">About</p>
+            <p className="text-white text-center text-xl py-2">About</p>
           </Link>
           <Link to="blog" onClick={toggleMenu}>
-            <p className="text-white text-center text-2xl">Blog</p>
+            <p className="text-white text-center text-xl py-2">Blog</p>
           </Link>
           <Link to="contacts" onClick={toggleMenu}>
-            <p className="text-white text-center text-2xl">Contacts</p>
+            <p className="text-white text-center text-xl pt-2">Contacts</p>
           </Link>
         </div>
       </div>
 
       <div className="fixed top-0 left-0 right-0 w-full z-10 text-gray-800">
-        <div className={`${trackScroll ? '' : 'bg-black'}`}>
+        <div className={`${trackScroll ? '' : 'bg-black'} px-4`}>
           <div className="container m-auto hidden lg:flex justify-between items-center text-white">
             <div className="flex items-center gap-4">
               <Link to="/">
                 <p
                   className={`${
                     trackScroll
-                      ? 'text-xl font-semibold text-gray-800 uppercase hover:text-gray-600 hover:underline'
-                      : 'text-xl font-semibold uppercase hover:text-gray-400'
+                      ? 'font-semibold text-gray-900 uppercase hover:text-gray-600 hover:underline'
+                      : 'font-semibold uppercase hover:text-gray-200 hover:underline'
                   }`}
                 >
                   Home
@@ -146,8 +146,8 @@ const Header = () => {
                 <p
                   className={`${
                     trackScroll
-                      ? 'text-xl font-semibold text-gray-800 uppercase hover:text-gray-600 hover:underline'
-                      : 'text-xl font-semibold uppercase hover:text-gray-400'
+                      ? 'font-semibold text-gray-900 uppercase hover:text-gray-600 hover:underline'
+                      : 'font-semibold uppercase hover:text-gray-200 hover:underline'
                   }`}
                 >
                   Rooms
@@ -157,8 +157,8 @@ const Header = () => {
                 <p
                   className={`${
                     trackScroll
-                      ? 'text-xl font-semibold text-gray-800 uppercase hover:text-gray-600 hover:underline'
-                      : 'text-xl font-semibold uppercase hover:text-gray-400'
+                      ? 'font-semibold text-gray-900 uppercase hover:text-gray-600 hover:underline'
+                      : 'font-semibold uppercase hover:text-gray-200 hover:underline'
                   }`}
                 >
                   About
@@ -168,8 +168,8 @@ const Header = () => {
                 <p
                   className={`${
                     trackScroll
-                      ? 'text-xl font-semibold text-gray-800 uppercase hover:text-gray-600 hover:underline'
-                      : 'text-xl font-semibold uppercase hover:text-gray-400'
+                      ? 'font-semibold text-gray-900 uppercase hover:text-gray-600 hover:underline'
+                      : 'font-semibold uppercase hover:text-gray-200 hover:underline'
                   }`}
                 >
                   Blog
@@ -179,8 +179,8 @@ const Header = () => {
                 <p
                   className={`${
                     trackScroll
-                      ? 'text-xl font-semibold text-gray-800 uppercase hover:text-gray-600 hover:underline'
-                      : 'text-xl font-semibold uppercase hover:text-gray-400'
+                      ? 'font-semibold text-gray-900 uppercase hover:text-gray-600 hover:underline'
+                      : 'font-semibold uppercase hover:text-gray-200 hover:underline'
                   }`}
                 >
                   Contacts
@@ -189,16 +189,16 @@ const Header = () => {
             </div>
 
             <div className="flex flex-col justify-center items-center">
-              <p className={`font-logo text-5xl lg:text-6xl cursor-default ${trackScroll ? ' text-gray-800' : ''}`}>
+              <p className={`font-logo text-4xl lg:text-5xl cursor-default ${trackScroll ? ' text-gray-800' : ''}`}>
                 Montana Resort
               </p>
             </div>
-            <div className="flex gap-4 justify-between">
+            <div className="flex gap-4 justify-between py-2 px-2">
               <button
                 className={`${
                   trackScroll
-                    ? 'px-4 py-2 rounded-sm border-2 border-black text-lg font-semibold text-gray-800 hover:text-black hover:border-gray-600'
-                    : 'px-4 py-2 rounded-sm border-2 border-white text-lg font-semibold text-white hover:border-gray-600'
+                    ? 'px-2 lg:px-4 lg:py-1 rounded-sm border border-black text-gray-800 hover:text-black hover:border-gray-600'
+                    : 'px-2 lg:px-4 lg:py-1 rounded-sm border border-white text-white hover:border-gray-600'
                 }`}
               >
                 Book a room
@@ -207,8 +207,8 @@ const Header = () => {
               <button
                 className={`${
                   trackScroll
-                    ? 'px-4 py-2 rounded-sm border-2 border-black text-lg font-semibold text-gray-800 hover:text-black hover:border-gray-600'
-                    : 'px-4 py-2 rounded-sm border-2 border-white text-lg font-semibold text-white hover:border-gray-600'
+                    ? 'px-2 lg:px-6 lg:py-1 rounded-sm border border-black text-gray-800 hover:text-black hover:border-gray-600'
+                    : 'px-2 lg:px-6 lg:py-1 rounded-sm border border-white text-white hover:border-gray-600'
                 }`}
               >
                 Log in
@@ -224,8 +224,10 @@ const Header = () => {
         </div>
 
         <div className="absolute w-full h-full top-0 left-0 flex flex-col justify-center items-center">
-          <p className="text-4xl tracking-widest capitalize font-normal text-center">{fullScreenTitle}</p>
-          {fullScreen && <p className="text-2xl text-center">Unlock to enjoy the best views of Maldives</p>}
+          <p className="text-2xl tracking-widest uppercase text-center font-medium text-black border border-black rounded-sm px-12">
+            {fullScreenTitle}
+          </p>
+          {fullScreen && <p className="text-2xl text-center pt-2">Unlock to enjoy the best views of Maldives</p>}
           {/* {window.innerWidth < 768 ? (
             <div className="flex gap-4 justify-between">
               <button className="px-4 py-2 font-semibold bg-opacity-60 bg-white">Book a room</button>

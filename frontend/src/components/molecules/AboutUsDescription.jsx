@@ -3,13 +3,11 @@ import Slide from 'react-reveal/Slide';
 
 const AboutUsDescription = () => {
   return (
-    <div className="container m-auto flex flex-col gap-20 px-0.5 py-8 md:px-2 md:flex-row">
-      <Slide left>
-        <div className="flex flex-col gap-4">
-          <p className="text-xl font-normal text-center tracking-tighter uppercase">
-            We Serve Fresh and Delicious Food
-          </p>
-          <p className="text-sm tracking-wide font-light break-all">
+    <div className="container m-auto flex flex-col gap-20 px-0.5 py-20 md:px-2 md:flex-row">
+      <div className="flex flex-col gap-4">
+        <p className="text-2xl font-semibold text-center tracking-tighter">We Serve Fresh and Delicious Food</p>
+        <Slide left duration={2000}>
+          <p className="tracking-wide break-all px-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, voluptas. Velit hic non facilis itaque culpa
             ea numquam expedita facere fugiat cupiditate ullam, ipsa neque, esse quaerat provident aliquam? Ipsam.
             Incidunt quaerat, reiciendis cumque nostrum impedit provident officiis consequatur, neque modi laborum
@@ -20,13 +18,13 @@ const AboutUsDescription = () => {
             deleniti officiis ipsa sequi aliquam vero laborum! Velit, expedita quas. Laudantium omnis, iusto excepturi
             officia labore perferendis nostrum harum temporibus facilis voluptates minima nisi neque tempora!
           </p>
-        </div>
+        </Slide>
+      </div>
 
-        <div className="flex flex-col gap-4">
-          <p className="text-xl font-normal text-center tracking-tighter uppercase">
-            We Serve Fresh and Delicious Food
-          </p>
-          <p className="text-sm tracking-wide font-light break-all">
+      <div className="flex flex-col gap-4">
+        <p className="text-2xl font-semibold text-center tracking-tighter">We Serve Fresh and Delicious Food</p>
+        <Slide right duration={2000}>
+          <p className="tracking-wide break-all px-4">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel eum repellendus placeat, maxime necessitatibus
             ipsam assumenda, obcaecati neque voluptate natus deleniti. Perspiciatis delectus voluptatibus velit ad magni
             deleniti tenetur temporibus! Quia rem ratione reiciendis et natus molestias ipsum, dolorem tenetur quis sint
@@ -37,8 +35,8 @@ const AboutUsDescription = () => {
             animi suscipit impedit repudiandae recusandae vel? Amet nam sint distinctio cupiditate itaque a minima,
             dolore numquam asperiores in reiciendis eum culpa.
           </p>
-        </div>
-      </Slide>
+        </Slide>
+      </div>
     </div>
   );
 };
