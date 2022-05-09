@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Slide from 'react-reveal/Slide';
 
 import BlogData from '../../json/BlogData.json';
 
@@ -13,9 +11,7 @@ const BlogSection = () => {
           <div className="md:w-1/2 md:px-4 md:py-8 lg:px-10" key={item.id}>
             <p className="text-2xl text-center font-medium pb-2">{item.title}</p>
             <div className="h-80 px-0.5 ">
-              <Slide right duration={1500}>
-                <img className="w-full h-full object-cover rounded-sm" src={item.image} alt={item.title} />
-              </Slide>
+              <img className="w-full h-full object-cover rounded-sm" src={item.image} alt={item.title} />
             </div>
 
             <div className="flex flex-col justify-around gap-8 px-4 pt-2">
@@ -23,13 +19,10 @@ const BlogSection = () => {
                 <p className="text-sm">{item.date}</p>
                 <p className="text-gray-500 text-sm">{item.comments}</p>
               </div>
-              <Slide left duration={1000}>
-                <p className="text-lg px-2 break-all">{item.description}</p>
-              </Slide>
 
-              <button className="py-2 px-12 border rounded-sm border-blue-400 text-blue-800 font-semibold self-center hover:tracking-wider">
-                Read More
-              </button>
+              <p className="text-lg px-2 break-all">{item.description}</p>
+
+              <button className="py-2 px-12 border rounded-sm border-blue-400 text-blue-800 font-semibold self-center hover:tracking-wider">Read More</button>
               {/* <Link to={`${item.id}`}></Link> */}
             </div>
           </div>

@@ -27,23 +27,11 @@ const LoginForm = () => {
       <p className="text-3xl text-center">Log in</p>
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 w-3/4 m-auto lg:w-1/2">
         <div>
-          <input
-            {...register('username')}
-            name="username"
-            type="text"
-            placeholder="Insert Username"
-            className="py-2 pl-2 w-full"
-          />
+          <input {...register('username')} name="username" type="text" placeholder="Insert Username" className="py-2 pl-2 w-full" />
           {errors.username && <p className="text-red-900 text-lg">{errors.username.message}</p>}
         </div>
         <div>
-          <input
-            {...register('password')}
-            name="password"
-            type="password"
-            placeholder="Insert Password"
-            className="py-2 pl-2 w-full"
-          />
+          <input {...register('password')} name="password" type="password" placeholder="Insert Password" className="py-2 pl-2 w-full" />
           {errors.password && <p className="">{errors.password.message}</p>}
         </div>
 

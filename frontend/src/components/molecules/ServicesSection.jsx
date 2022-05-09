@@ -1,5 +1,4 @@
 import React from 'react';
-import Slide from 'react-reveal/Slide';
 
 //! ICONS
 import { HiOutlineWifi, HiOutlineBookOpen } from 'react-icons/hi';
@@ -23,14 +22,10 @@ const ServicesSection = () => {
       <p className="text-5xl text-center font-medium">Our Services</p>
       <div className="flex flex-col justify-center items-center md:flex-row md:flex-wrap lg:gap-4 lg:flex-nowrap">
         {serviceInfo.map((item, index) => (
-          <div
-            className="flex flex-col gap-2 pt-2 pb-4 justify-center items-center md:w-1/2 lg:w-1/6 lg:rounded-t-full lg:rounded-br-full lg:px-8"
-            key={index}
-          >
+          <div className="flex flex-col gap-2 pt-2 pb-4 justify-center items-center md:w-1/2 lg:w-1/6 lg:rounded-t-full lg:rounded-br-full lg:px-8" key={index}>
             {item[0]}
-            <Slide right duration={2500}>
-              <p className="font-semibold">{item[1]}</p>
-            </Slide>
+
+            <p className="font-semibold">{item[1]}</p>
           </div>
         ))}
       </div>

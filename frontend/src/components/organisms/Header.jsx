@@ -64,13 +64,11 @@ const Header = () => {
         break;
       case '/blog':
         setFullScreenImage(BlogImage);
-
         setfullScreen(false);
         setFullScreenTitle('Blog Page');
         break;
       case '/contacts':
         setFullScreenImage(ContactsImage);
-
         setfullScreen(false);
         setFullScreenTitle('Contact Us');
         break;
@@ -189,9 +187,7 @@ const Header = () => {
             </div>
 
             <div className="flex flex-col justify-center items-center">
-              <p className={`font-logo text-4xl lg:text-5xl cursor-default ${trackScroll ? ' text-gray-800' : ''}`}>
-                Montana Resort
-              </p>
+              <p className={`font-logo text-4xl lg:text-5xl cursor-default ${trackScroll ? ' text-gray-800' : ''}`}>Montana Resort</p>
             </div>
             <div className="flex gap-4 justify-between py-2 px-2">
               <button
@@ -224,9 +220,7 @@ const Header = () => {
         </div>
 
         <div className="absolute w-full h-full top-0 left-0 flex flex-col justify-center items-center">
-          <p className="text-2xl tracking-widest uppercase text-center font-medium text-black border border-black rounded-sm px-12">
-            {fullScreenTitle}
-          </p>
+          <p className="text-2xl tracking-widest uppercase text-center font-medium text-black border border-black rounded-sm px-12">{fullScreenTitle}</p>
           {fullScreen && <p className="text-2xl text-center pt-2">Unlock to enjoy the best views of Maldives</p>}
           {/* {window.innerWidth < 768 ? (
             <div className="flex gap-4 justify-between">
